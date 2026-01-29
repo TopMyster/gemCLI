@@ -5,7 +5,7 @@ from google import genai
 
 load_dotenv()
 
-def ask():
+def gemini():
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         print("Error: GEMINI_API_KEY is not set.")
@@ -29,4 +29,4 @@ def ask():
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    ask()
+    gemini()
