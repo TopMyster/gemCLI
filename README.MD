@@ -1,4 +1,11 @@
-run to install
-```pip3 install -e .```
-Next run gemini command to use
-```gemini```
+To install, run:
+
+```bash
+pip3 install -e .
+```
+
+Once installation is complete, use the Gemini CLI with:
+
+```bash
+gemini
+```
