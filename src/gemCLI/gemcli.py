@@ -5,6 +5,8 @@ from google import genai
 
 load_dotenv()
 
+max_words=20 # Change if you'd like
+
 def gemini():
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
@@ -22,7 +24,7 @@ def gemini():
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=prompt,
-            config={"system_instruction": "Answer in at most 20 words. Be concise."}
+            config={"system_instruction": f"Answer in at most {max_words}. Be concise."}
         )
         print(response.text)
     except Exception as e:
